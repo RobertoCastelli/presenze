@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: grey;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+button {
+    width: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttons,
+form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 380px;
+    background: url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 10px;
+}

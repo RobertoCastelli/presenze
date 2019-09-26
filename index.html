@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>PRESENZE</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ferie & Permessi</h1>
+            <h5 id="data_richiesta"></h5>
+        </header>
+        
+        <hr>
+    
+        <form id="login_form">
+            <div class="input_form">
+                <input type="email" id="email" placeholder="e-mail" class="form-control" required>
+            </div>
+            <div class="input_form">
+                <input type="password" id="password" placeholder="password" class="form-control" required>
+            </div>
+        </form>
+
+        <div class="buttons">
+            <button class="btn btn-outline-secondary w-100">AUTENTIFICATI</button>
+        </div>
+          
+        <form id="input_date">
+            <div class="input_form">
+                <label for="dal">dal</label>
+                <input id="dal" type="date" class="form-control">
+            </div>
+            <div class="input_form">
+                <label for="al">al</label>
+                <input id="al" type="date" class="form-control">
+            </div>
+        </form>
+
+        <div class="buttons">
+            <button class="btn btn-outline-success">INVIA DATI</button>
+        </div>
+    
+        <footer>copyright &copy; 2019 Roberto Castelli</footer>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDFKbLGJ2-uT2Hyw_IkcwEtGOguu3hy2Sk",
+          authDomain: "ferie-permessi.firebaseapp.com",
+          databaseURL: "https://ferie-permessi.firebaseio.com",
+          projectId: "ferie-permessi",
+          storageBucket: "",
+          messagingSenderId: "998369106895",
+          appId: "1:998369106895:web:7d0fa49438394db470d0ba"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+    <script src="app.js"></script>
+   
+</body>
+</html>
